@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "6ea12fa0-56a6-44c3-8854-cf23fd9f8a40",
+		"name": "spring-restful-practice-StudentInformation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22524158"
+	},
+	"item": [
+		{
+			"name": "get All Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/information",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Student By KeyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/information/:keyId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"information",
+						":keyId"
+					],
+					"variable": [
+						{
+							"key": "keyId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyId\": \"11\",\r\n    \"id\": \"N120134836\",\r\n    \"name\": \"Kal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/information",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyId\": \"1\",\r\n    \"id\": \"A1234567890\",\r\n    \"name\": \"Pig\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/information/:keyId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"information",
+						":keyId"
+					],
+					"variable": [
+						{
+							"key": "keyId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/information/:keyId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"information",
+						":keyId"
+					],
+					"variable": [
+						{
+							"key": "keyId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
